@@ -1,4 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --color-primary-blue: #2c6bff;
+  --color-text-blue: #1E3462;
+  --font-space-mono: "Space Mono", monospace;
+}
+
+body {
+  font-family: var(--font-space-mono);
+}
 
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

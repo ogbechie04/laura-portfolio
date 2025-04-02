@@ -1,11 +1,11 @@
-
 import './App.css'
+import HomePage from './pages/HomePage'
 
 function App() {
 
   return (
     <>
-      <h2 className='font-black'>Abraca</h2>
+      <HomePage />
     </>
   )
 }
