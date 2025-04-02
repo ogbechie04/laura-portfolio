@@ -40,7 +40,7 @@ const AboutSection = () => {
             </p>
           </div>
 
-          <button className="mt-6 md:mt-[2.25rem] px-4 py-2.5 bg-primary-blue text-lg text-white font-bold rounded-[10px]">
+          <button className="mt-6 md:mt-[2.25rem] px-4 py-2.5 bg-primary-blue text-lg text-white font-bold rounded-[10px] hover:scale-110 transition duration-600 ease-in-out">
             <a href="/OGBECHIE_LAURA_SOFTWARE_ENGINEER_CV.pdf" download>
               Download CV
             </a>
@@ -92,7 +92,7 @@ const AboutSection = () => {
             {/* -------- github -------- */}
             <a
               href="https://github.com/ogbechie04"
-              className="text-lg md:text-2xl"
+              className="text-lg md:text-2xl hover:scale-150 delay-150 transition duration-600 ease-in-out"
               target="_blank"
             >
               <FaGithub />
@@ -100,7 +100,7 @@ const AboutSection = () => {
             {/* -------- x/twitter -------- */}
             <a
               href="https://x.com/ogbechie_04"
-              className="text-lg md:text-2xl"
+              className="text-lg md:text-2xl hover:scale-150 transition duration-600 ease-in-out"
               target="_blank"
             >
               <FaXTwitter />
@@ -108,7 +108,7 @@ const AboutSection = () => {
             {/* -------- instagram -------- */}
             <a
               href="https://www.instagram.com/ogbechie_04/"
-              className="text-lg md:text-2xl"
+              className="text-lg md:text-2xl hover:scale-150 transition duration-600 ease-in-out"
               target="_blank"
             >
               <FaInstagram />
@@ -116,7 +116,7 @@ const AboutSection = () => {
             {/* -------- linkedIn -------- */}
             <a
               href="https://www.linkedin.com/in/laura-ogbechie-80474b150/"
-              className="text-lg md:text-2xl"
+              className="text-lg md:text-2xl hover:scale-150 transition duration-600 ease-in-out"
               target="_blank"
             >
               <FaLinkedin />

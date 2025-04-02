@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { easeOut, motion, useAnimation, useInView } from "framer-motion";
 
 interface TimelineItem {
   title: string;
@@ -16,11 +17,34 @@ const TimelineItemDesktop: React.FC<{ item: TimelineItem; index: number }> = ({
   item,
   index,
 }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true });
+  const controls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+    // if (isInView) {
+    //   controls.start({ opacity: 1, y: 0 });
+    // } else {
+    //   controls.start({ opacity: 0, y: 50 });
+    // }
+  }, [controls, isInView]);
+
+  const motionVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, easeOut } },
+  };
+
   const isLeft = index % 2 === 0;
   if (isLeft) {
     // -------- left side --------
     return (
-      <div
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={motionVariants}
         className={`md:flex hidden w-full md:flex-row md:items-center mb-12 relative z-10`}
       >
         <div className="w-full md:w-1/2 flex justify-end gap-5 pr-6 relative">
@@ -42,17 +66,23 @@ const TimelineItemDesktop: React.FC<{ item: TimelineItem; index: number }> = ({
           </div>
         </div>
         <div className="hidden md:block w-0 md:w-1/2"></div>
-      </div>
+      </motion.div>
     );
   } else {
     // -------- right side --------
     return (
-      <div className="md:flex hidden w-full md:flex-row md:items-center mb-12 relative z-10">
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={motionVariants}
+        className="md:flex hidden w-full md:flex-row md:items-center mb-12 relative z-10"
+      >
         <div className="hidden md:block w-0 md:w-1/2"></div>
         <div className="w-full md:w-1/2 flex md:pl-6 text-left relative gap-5">
           {/* -------- blue horizontal line -------- */}
           <div className="absolute top-4 left-0 h-1 w-16 rounded-r-[4.125rem] bg-primary-blue z-0" />
-          
+
           {/* -------- card --------  */}
           <div className="relative p-4 pl-12 pt-0 text-left max-w-[33rem]">
             <h3 className="font-medium text-2xl">
@@ -67,14 +97,38 @@ const TimelineItemDesktop: React.FC<{ item: TimelineItem; index: number }> = ({
             <p className="text-base text-text-blue mt-2">{item.description}</p>
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   }
 };
 
 const TimelineItemMobile: React.FC<{ item: TimelineItem }> = ({ item }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true });
+  const controls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+    // if (isInView) {
+    //   controls.start({ opacity: 1, y: 0 });
+    // } else {
+    //   controls.start({ opacity: 0, y: 50 });
+    // }
+  }, [controls, isInView]);
+
+  const motionVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, easeOut } },
+  };
   return (
-    <div className="block md:hidden relative pl-10 mb-10">
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={motionVariants}
+      className="block md:hidden relative pl-10 mb-10"
+    >
       {/* -------- blue horizontal line --------  */}
       <div className="absolute left-4 top-3 w-6 h-1 rounded-r-[4.125rem] bg-primary-blue z-10" />
 
@@ -89,7 +143,7 @@ const TimelineItemMobile: React.FC<{ item: TimelineItem }> = ({ item }) => {
         </p>
         <p className="text-base text-text-blue mt-2">{item.description}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
