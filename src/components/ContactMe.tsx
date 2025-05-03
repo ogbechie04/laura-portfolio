@@ -1,4 +1,4 @@
-import React, { FormEvent, useRef, useState, useEffect } from "react";
+import { FormEvent, useRef, useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 
 const ContactMe = () => {

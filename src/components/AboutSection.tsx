@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGithub, FaXTwitter, FaInstagram, FaLinkedin } from "react-icons/fa6";
 
 const AboutSection = () => {

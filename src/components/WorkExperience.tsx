@@ -1,4 +1,3 @@
-import React from "react";
 import Timeline from "./Timeline";
 // import { RiGraduationCapLine } from "react-icons/ri";
 
