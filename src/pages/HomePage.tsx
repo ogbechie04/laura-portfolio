@@ -5,6 +5,7 @@ import WorkExperience from "../components/WorkExperience";
 import SkillsSection from "../components/SkillsSection";
 import WorksDisplaySection from "../components/WorksDisplaySection";
 import ContactMe from "../components/ContactMe";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
@@ -26,6 +27,7 @@ const HomePage = () => {
         <ContactMe />
       </main>
         {/* -------- footer -------- */}
+        <Footer />
     </div>
   );
 };

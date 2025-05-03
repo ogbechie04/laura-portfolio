@@ -21,13 +21,13 @@ const ContactMe = () => {
     if (!formRef.current) return;
 
     emailjs.sendForm(serviceID, templateID, formRef.current, publicKey).then(
-      (result) => {
-        console.log("✅ message sent:", result.text);
+      () => {
+        // console.log("✅ message sent:", result.text);
         setMessage({ text: "Thanks for reaching out! I’ll be in touch soon!", type: "success" });
         formRef.current?.reset();
       },
-      (error) => {
-        console.error("Error sending message:", error.text);
+      () => {
+        // console.error("Error sending message:", error.text);
         setMessage({
           text: "Something went wrong while sending your message. Please try again shortly. I appreciate your patience!",
           type: "error",
