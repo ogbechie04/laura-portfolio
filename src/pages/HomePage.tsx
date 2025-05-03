@@ -2,16 +2,30 @@ import React from "react";
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
 import WorkExperience from "../components/WorkExperience";
+import SkillsSection from "../components/SkillsSection";
+import WorksDisplaySection from "../components/WorksDisplaySection";
+import ContactMe from "../components/ContactMe";
 
 const HomePage = () => {
   return (
     <div className="min-h-screen h-full w-full">
       {/* -------- header/hero section -------- */}
-      <HeroSection />
-      {/* -------- about me -------- */}
-      <AboutSection />
-      {/* -------- work experience -------- */}
-      <WorkExperience />
+      <header>
+        <HeroSection />
+      </header>
+      <main>
+        {/* -------- about me -------- */}
+        <AboutSection />
+        {/* -------- work experience -------- */}
+        <WorkExperience />
+        {/* -------- skills */}
+        <SkillsSection />
+        {/* -------- work display -------- */}
+        <WorksDisplaySection />
+        {/* -------- contact me -------- */}
+        <ContactMe />
+      </main>
+        {/* -------- footer -------- */}
     </div>
   );
 };

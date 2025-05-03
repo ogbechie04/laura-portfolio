@@ -5,7 +5,7 @@ import Timeline from "./Timeline";
 const WorkExperience = () => {
   return (
     <div className="relative w-full px-4 md:px-12 h-full mt-10 md:mt-20">
-      <div className="absolute left-8 md:left-1/2 md:top-0  h-full w-1 bg-primary-blue transform -translate-x-1/2 z-0" />
+      <div className="absolute left-8 md:left-1/2 md:top-0  h-full w-1 bg-accent transform -translate-x-1/2 z-0" />
 
       <Timeline
         title="Work Experience"

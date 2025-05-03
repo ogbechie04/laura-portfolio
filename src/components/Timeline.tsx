@@ -49,21 +49,21 @@ const TimelineItemDesktop: React.FC<{ item: TimelineItem; index: number }> = ({
       >
         <div className="w-full md:w-1/2 flex justify-end gap-5 pr-6 relative">
           {/* -------- blue horizontal line -------- */}
-          <div className="absolute top-4 right-0 h-1 w-16 rounded-l-[4.125rem] bg-primary-blue z-0" />
+          <div className="absolute top-4 right-0 h-1 w-16 rounded-l-[4.125rem] bg-accent z-0" />
           {/* -------- card -------- */}
-          <div className="relative p-4 pr-12 pt-0 text-right max-w-[33rem]">
+          <article className="relative p-4 pr-12 pt-0 text-right max-w-[33rem]">
             {/* font-bold text-2xl flex items-start justify-end w-full */}
-            <h3 className="font-medium text-2xl flex items-start justify-end w-full">
+            <h3 className="font-medium text-2xl flex items-start justify-end w-full text-white">
               {item.icon && (
-                <span className="text-primary-blue">{item.icon}</span>
+                <span className="text-text" aria-hidden='true'>{item.icon}</span>
               )}
               {item.title}
             </h3>
-            <p className="text-base text-text-blue opacity-60 mt-2">
+            <p className="text-base text-deep-grey opacity-60 mt-2">
               {item.subtitle}
             </p>
-            <p className="text-base text-text-blue mt-2">{item.description}</p>
-          </div>
+            <p className="text-base text-white mt-2">{item.description}</p>
+          </article>
         </div>
         <div className="hidden md:block w-0 md:w-1/2"></div>
       </motion.div>
@@ -81,21 +81,21 @@ const TimelineItemDesktop: React.FC<{ item: TimelineItem; index: number }> = ({
         <div className="hidden md:block w-0 md:w-1/2"></div>
         <div className="w-full md:w-1/2 flex md:pl-6 text-left relative gap-5">
           {/* -------- blue horizontal line -------- */}
-          <div className="absolute top-4 left-0 h-1 w-16 rounded-r-[4.125rem] bg-primary-blue z-0" />
+          <div className="absolute top-4 left-0 h-1 w-16 rounded-r-[4.125rem] bg-accent z-0" />
 
           {/* -------- card --------  */}
-          <div className="relative p-4 pl-12 pt-0 text-left max-w-[33rem]">
-            <h3 className="font-medium text-2xl">
+          <article className="relative p-4 pl-12 pt-0 text-left max-w-[33rem]">
+            <h3 className="font-medium text-2xl text-white">
               {item.title}
               {item.icon && (
-                <span className="text-primary-blue">{item.icon}</span>
+                <span className="text-accent" aria-hidden='true'>{item.icon}</span>
               )}
             </h3>
-            <p className="text-base text-text-blue opacity-60 mt-2">
+            <p className="text-base text-deep-grey opacity-60 mt-2">
               {item.subtitle}
             </p>
-            <p className="text-base text-text-blue mt-2">{item.description}</p>
-          </div>
+            <p className="text-base text-white mt-2">{item.description}</p>
+          </article>
         </div>
       </motion.div>
     );
@@ -130,19 +130,19 @@ const TimelineItemMobile: React.FC<{ item: TimelineItem }> = ({ item }) => {
       className="block md:hidden relative pl-10 mb-10"
     >
       {/* -------- blue horizontal line --------  */}
-      <div className="absolute left-4 top-3 w-6 h-1 rounded-r-[4.125rem] bg-primary-blue z-10" />
+      <div className="absolute left-4 top-3 w-6 h-1 rounded-r-[4.125rem] bg-accent z-10" />
 
       {/* -------- card --------  */}
-      <div className=" p-4 pt-0 rounded-md bg-white relative z-10">
-        <h3 className="font-medium inline-flex items-center text-xl">
-          {item.icon && <span className="text-blue-500 mr-2">{item.icon}</span>}
+      <article className=" p-4 pt-0 rounded-md  relative z-10">
+        <h3 className="font-medium inline-flex items-center text-xl text-white">
+          {item.icon && <span className="text-accent mr-2" aria-hidden='true'>{item.icon}</span>}
           {item.title}
         </h3>
-        <p className="text-base text-text-blue opacity-60 mt-2">
+        <p className="text-base text-deep-grey opacity-60 mt-2">
           {item.subtitle}
         </p>
-        <p className="text-base text-text-blue mt-2">{item.description}</p>
-      </div>
+        <p className="text-base text-white mt-2">{item.description}</p>
+      </article>
     </motion.div>
   );
 };
@@ -152,7 +152,7 @@ const Timeline: React.FC<TimelineProps> = ({ title, items }) => {
     <>
       {/* -------- section title -------- */}
       <div className="relative flex md:justify-center mb-8">
-        <h2 className="bg-primary-blue text-white px-4 py-2 rounded font-bold text-lg">
+        <h2 className="bg-accent text-white px-4 py-2 rounded font-bold text-lg">
           {title}
         </h2>
       </div>
