@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 
 const works = [
   {
-    image: "./projects/altGreenery.png",
+    image: "./projects/altGreenery-min.png",
     title: "AltGreenery",
     description:
       "A responsive website for showcasing locally sourced agricultural produce. Built with React, TypeScript, and Tailwind CSS, this project highlights my ability to create clean, modern UIs while focusing on sustainability and user engagement.",
@@ -12,7 +12,7 @@ const works = [
     repoLink: "https://github.com/ogbechie04/altGreenery",
   },
   {
-    image: "./projects/enter-web-app-2.png",
+    image: "./projects/enter-web-app-2-min.png",
     title: "Entertainment Web App",
     description:
       "A movie browsing application styled after popular streaming platforms. Includes search functionality, trending categories, and bookmarking features. Developed using React, Firebase, and JavaScript to demonstrate real-time data integration and dynamic UI rendering.",
@@ -21,7 +21,7 @@ const works = [
     repoLink: "https://github.com/ogbechie04/entertainment-web-app",
   },
   {
-    image: "./projects/carefinder.png",
+    image: "./projects/carefinder-min.png",
     title: "Carefinder",
     description:
       "A hospital directory web app for discovering top-rated hospitals nearby. Key features include search filters, hospital detail pages, and user authentication. Focuses on usability and responsive design.",
@@ -30,7 +30,7 @@ const works = [
     repoLink: "https://github.com/ogbechie04/carefinder",
   },
   {
-    image: "./projects/pay4me-2.png",
+    image: "./projects/pay4me-2-min.png",
     title: "Pay4Me",
     description:
       "A payment interface designed for international education-related transactions. Includes a clean layout, call-to-action sections, and responsive design elements. It showcases UI component styling and layout structure.",
@@ -39,7 +39,7 @@ const works = [
     repoLink: "https://github.com/ogbechie04/pay4me-internPulse",
   },
   {
-    image: "./projects/edudesks.png",
+    image: "./projects/edudesks-min.png",
     title: "Edudesks",
     description:
       "Landing page for a school management platform that supports student admissions, payment processing, and dashboard functionality.",
@@ -48,7 +48,7 @@ const works = [
     repoLink: "https://github.com/ogbechie04/laura-edudesk",
   },
   {
-    image: "./projects/age-calculator.png",
+    image: "./projects/age-calculator-min.png",
     title: "Age Calculator",
     description:
       "A simple responsive web tool for calculating a user’s age in years, months, and days based on selected birth date input. Built with HTML, CSS, and JavaScript, demonstrating basic form handling and date logic implementation.",
@@ -79,6 +79,7 @@ const WorksDisplaySection = () => {
                 src={work.image}
                 alt="altGreenery"
                 className="w-full h-full rounded-2xl"
+                loading="lazy"
               />
             </div>
 

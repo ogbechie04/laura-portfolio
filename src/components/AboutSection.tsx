@@ -50,7 +50,7 @@ const AboutSection = () => {
           {/* -------- blue background -------- */}
           <div className="absolute w-full h-full bg-accent bottom-2 inset-0 top-2 left-0 z-0 rounded-full"></div>
           <div className="relative w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden z-10">
-            <img src="/profile-picture.jpeg" alt="Laura Ogbechie" />
+            <img src="/profile-picture.jpeg" alt="Laura Ogbechie" loading="lazy" />
           </div>
         </div>
       </div>
