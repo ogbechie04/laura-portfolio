@@ -73,8 +73,8 @@ const AboutSection = () => {
           software engineering principles.
           <br />
           <br />
-          I’ve worked closely with full product teams — including designers,
-          backend engineers, and product managers — to bring real-world
+          I’ve worked closely with full product teams including designers,
+          backend engineers, and product managers to bring real-world
           applications to life, combining strong collaboration with a
           user-focused development approach.
           <br />

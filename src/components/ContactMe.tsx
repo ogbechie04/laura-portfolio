@@ -110,7 +110,7 @@ const ContactMe = () => {
       <p className="w-full  mt-5 text-base md:text-lg text-white self-start text-justify">
         Looking for a frontend developer who values clean design and thoughtful
         user experiences? I’m currently open to new opportunities and
-        collaborations — let’s talk!
+        collaborations. Let’s talk!
       </p>
 
       {message && (
